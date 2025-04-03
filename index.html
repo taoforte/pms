@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PMS v0.1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Pills Management Systems PMS</h1>
+    </header>
+    
+    <div class="container">
+        <div class="add-medication">
+            <h3>Add New Medication</h3>
+            <form id="addMedForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Medication Name</label>
+                        <input type="text" id="medName" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Dosage Form</label>
+                        <select id="dosageForm">
+                            <option value="tablet">Tablet</option>
+                            <option value="capsule">Capsule</option>
+                            <option value="liquid">Liquid</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Strength</label>
+                        <input type="text" id="strength" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Quantity</label>
+                        <input type="number" id="quantity" value="30" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Start Date</label>
+                        <input type="date" id="startDate" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Instructions</label>
+                    <input type="text" id="instructions">
+                </div>
+                <button type="submit" class="submit-btn">Add Medication</button>
+            </form>
+        </div>
+
+        <div id="medicationsList">
+            <!-- Medications will be inserted here by JavaScript -->
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
